@@ -3,8 +3,7 @@ const GROUPS = {
     "anan",
     "kun",
     "pa",
-    "pata",
-    "pela",
+    //"pela",
     "sapole",
     "sema",
     "tijante",
@@ -20,21 +19,22 @@ const GROUPS = {
     "momu",
     "musi",
     "neje",
-    "nile",
     "nin",
     "pawo",
     "pulusi",
     "suwina",
   ],
-  tastes: ["kikolo", "muncu", "nankin", "nelo", "pikante", "satu", "umami"],
+  tastes: ["kikolo", "muncu", "nankin", "pikante", "satu", "umami"],
   colors: [
     "hunsi",
-    "lanki",
     "lunti",
     "nalinca",
+    "nelo",
+    "nile",
     "penpe",
     "pula",
     "sepo",
+    "sunaja",
     "tusa",
   ],
   emotions: [
@@ -93,8 +93,6 @@ const GROUPS = {
     "pucon",
     "titan",
   ],
-  pronouns: ["ja", "mi", "tu", "usen"],
-  body: [],
   shapes: [],
 };
 
@@ -128,10 +126,10 @@ async function getDictionary(event) {
   const TSV_URL =
     "https://docs.google.com/spreadsheets/d/e/2PACX-1vTVGXFd17kcvfu__zjshqiV3kW360IclOEfEdWda_K6ZCg4TY6nW2Gwn4_bs1yQeFLwrZI1_xEvSuP0/pub?gid=0&single=true&output=tsv";
   const text = await fetch(TSV_URL).then((res) => res.text());
-  DICT = text.split(reNewline);
+  DICT = text.trim().split(reNewline);
   // extract the headers we want
   DICT[0] = DICT[0].split("\t");
-  console.log("DICT[0]", DICT[0]);
+  console.log("DICT.at(-1)", DICT.at(-1));
   const keys = {
     word: DICT[0].indexOf("Word"),
     main_pos: DICT[0].indexOf("Type"),
@@ -150,9 +148,10 @@ async function getDictionary(event) {
   // assemble the dictionary
   DICT = Array.from(DICT, (el) => {
     let array = el.split("\t");
-    let ikama_tasuwi = IKAMA_TASUWI[array[keys.word]] || "not found";
-    if (array[keys.word] == "alu") {
-      console.log(array);
+    let ikama_tasuwi = IKAMA_TASUWI[array[keys.word]] || undefined;
+    // There is an incomplete line after `tepu` in the source CSV. Skip over this, and remove undefined element later
+    if (array[keys.word] == "") {
+      return undefined;
     }
     return {
       word: array[keys.word],
@@ -173,10 +172,11 @@ async function getDictionary(event) {
       ikamaTasuwi: ikama_tasuwi,
     };
   });
+  DICT = DICT.filter(el => el !== undefined);
   console.log(DICT);
   const list = document.getElementById("words");
   list.replaceChildren();
-  populateList(0, 100);
+  populateList(0, 32);
   return;
 }
 
@@ -187,6 +187,10 @@ function populateList(index, count) {
     if (i >= DICT.length) {
       return;
     }
+    el.dataset.word = DICT[i].word;
+    if (DICT[i].ikamaTasuwi === undefined) {
+      el.classList.add("noIkamaTasuwi");
+    }
     el.innerHTML = `
 <div class="wordHead" id="word_${DICT[i].word}">
   <img src="./img/${DICT[i].word}" loading="lazy">
@@ -196,7 +200,7 @@ function populateList(index, count) {
   </div>
 </div><div class="wordBody">
   <ul class="wordIT">
-    <li><strong>Ikama Tasuwi:</strong> ${DICT[i].ikamaTasuwi}</li>
+    <li><strong style="display: none;">Ikama Tasuwi:</strong> ${DICT[i].ikamaTasuwi || "[not found]"}</li>
   </ul>
   <ul class="wordDef">
     ${
@@ -251,8 +255,68 @@ function populateList(index, count) {
   }, 1);
 }
 
+function normalSortElements(a, b) {
+  return a.dataset.word.localeCompare(b.dataset.word);
+}
+const LIKANU_ORDER = "ptkcwljmnshaieou";
+function likanuSortElements(a, b) {
+  return likanuSortRecursive(a.dataset.word, b.dataset.word);
+}
+function likanuSortRecursive(a, b) {
+  if (a === "") {
+    if (b === "") {
+      return 0;
+    }
+    return 1;
+  }
+  if (b === "") {
+    return -1;
+  }
+  const diff = LIKANU_ORDER.indexOf(a.charAt(0)) - LIKANU_ORDER.indexOf(b.charAt(0))
+  if (diff === 0) {
+    return likanuSortRecursive(
+      a.substring(1), b.substring(1)
+    );
+  } else {
+    return Math.sign(diff);
+  }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
-  document
-    .getElementById("getDictionary")
-    .addEventListener("click", getDictionary);
+  getDictionary();
+  const search = document.getElementById("wordsSearchBox");
+  search.value = "";
+  search.addEventListener("input", event => {
+    const v = search.value.trim().toLowerCase();
+    if (v === "") {
+      for (let child of list.children) {
+        child.style.removeProperty("display");
+      }
+      return;
+    }
+    else {
+      for (let child of list.children) {
+        if (child.dataset.word.includes(v)) {
+          child.style.removeProperty("display");
+        } else {
+          child.style.setProperty("display", "none");
+        }
+      }
+    }
+  });
+  const sortLikanu = document.getElementById("sortInLikanuOrder");
+  
+  sortLikanu.checked = false;
+  sortLikanu.addEventListener("change", event => {
+    let c = Array.from(list.children);
+    if (sortLikanu.checked) {
+      c.sort(likanuSortElements);
+    } else {
+      c.sort(normalSortElements);
+    }
+    console.log(c);
+    list.replaceChildren(
+      ...c
+    );
+  });
 });

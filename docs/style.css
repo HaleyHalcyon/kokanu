@@ -26,16 +26,35 @@ summary {
   padding: 0.5rem;
 }
 
+blockquote.warning {
+  border: 0.5rem solid var(--text-accent);
+  margin: 0;
+  padding: 0.5rem;
+}
+
+blockquote.warning > b:first-child {
+  display: block;
+  background: black;
+  font-size: 1.5rem;
+  margin: -0.5rem;
+  padding: 0.5rem;
+  color: white;
+}
+
 .ipa {
   font-family: "Gentium Plus", serif;
 }
 
-button {
+button,
+input {
   font-size: inherit;
   font-family: inherit;
+  border-radius: 0.25rem;
+}
+
+button {
   background-color: lightgray;
   color: black;
-  border-radius: 0.25rem;
 }
 
 #words {
@@ -113,5 +132,27 @@ button {
   list-style-type: none;
 }
 
-.wordBody > li {
+#wordsFilter {
+  background-color: white;
+}
+
+#wordsSearchBox {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#wordsFilter > label {
+  display: inline-block;
+  margin: 0.125rem;
+  border-radius: 0.25rem;
+  padding: 0.125rem;
+  border: 0.125rem solid lightgray;
+}
+
+#wordsFilter > label:has(:checked) {
+  border-color: var(--text-accent);
+}
+
+#wordsFilter:has(#showOnlyMissing:checked) + #words > li:not(.noIkamaTasuwi) {
+  display: none;
 }
