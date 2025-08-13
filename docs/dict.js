@@ -102,7 +102,7 @@ let IKAMA_TASUWI = {};
 let DICT = [];
 
 async function getDictionary() {
-  const IKAMA_TASUWI_URL = URL.parse("/ikamatasuwi.tsv", window.location);
+  const IKAMA_TASUWI_URL = new URL("./ikamatasuwi.tsv", window.location);
   console.log(IKAMA_TASUWI_URL);
   const itText = await fetch(IKAMA_TASUWI_URL).then((res) => res.text());
   let itTemp = itText.split(reNewline);
