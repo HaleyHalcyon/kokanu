@@ -114,9 +114,9 @@ async function getDictionary() {
       arr[1] = arr[1]
         .replaceAll(
           /`(.+?)`/g,
-          '<a href="https://nimi.li/$1" target="_blank" class="tp">$1</a>'
+          '<a href="https://nimi.li/$1" target="_blank" class="tp"><i>$1</i></a>'
         )
-        .replaceAll(/\{(.+?)\}/g, '<a href="#word_$1">$1</a>');
+        .replaceAll(/\{(.+?)\}/g, '<a href="#word_$1"><i>$1</i></a>');
       return arr;
     })
   );
