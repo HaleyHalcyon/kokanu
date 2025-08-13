@@ -100,8 +100,7 @@ const reNewline = /[\r\n]+/;
 let IKAMA_TASUWI = {};
 let DICT = [];
 
-async function getDictionary(event) {
-  event.target.parentElement.removeChild(event.target);
+async function getDictionary() {
   const IKAMA_TASUWI_URL = URL.parse("/ikamatasuwi.tsv", window.location);
   console.log(IKAMA_TASUWI_URL);
   const itText = await fetch(IKAMA_TASUWI_URL).then((res) => res.text());
