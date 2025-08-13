@@ -1,9 +1,73 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Dummy page</title>
+  <script src="dict.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gentium+Plus&family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-  <h1>Hello world!</h1>
+  <div class="margin">
+    <h1>Hello world!</h1>
+    <p>Note: This Webpage is very much a work in progress. None of the images of Ikama Tasuwi are ready yet.</p>
+  </div>
+  <details open>
+    <summary>About</summary>
+    <p>Ikama Tasuwi (Drawn Words) is a Sitelen Pona derivative for Kokanu.</p>
+    <p><b>Warning:</b> Because Kokanu’s grammar has diverged radically from Toki Pona’s, Ikama Tasuwi and Sitelen Pona are not mutually intelligible! Think of Sitelen Pona to Ikama Tasuwi like Chinese characters to Chu Nom for Vietnamese.</p>
+  </details>
+  <details>
+    <summary>Word list</summary>
+    <button type="button" id="getDictionary">get dictionary</button>
+    <ul id="words">
+      <li>
+        <div class="wordHead">
+          <img src="./img/ikama">
+          <strong>ikama</strong>
+          <i>“to be called/named (a name/word/address)”</i>
+        </div>
+        <div class="wordBody">
+          <ul class="wordIT">
+            <li><strong>Ikama Tasuwi:</strong> ≡ SP `nimi`</li>
+          </ul>
+          <ul class="wordDef">
+            <li><strong>Noun:</strong> name/word/address</li>
+            <li><strong>Verb:</strong> to be called/named</li>
+            <li><strong>Modifier:</strong> name-like/word-like/address-like</li>
+          </ul>
+          <ul class="wordEtym">
+            <li><strong>From:</strong> Zulu igama <span class="ipa">/îːɡâːma/</span></li>
+            <li><strong>Family:</strong> Niger-Congo</li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div class="wordHead">
+          <img src="./img/tasuwi">
+          <strong>tasuwi</strong>
+          <i>“to draw (a picture)”</i>
+        </div>
+        <div class="wordBody">
+          <ul class="wordIT">
+            <li><strong>Ikama Tasuwi:</strong> a pen or other writing instrument, with a curved tail behind its tip</li>
+          </ul>
+          <ul class="wordDef">
+            <li><strong>Noun:</strong> a drawing/picture</li>
+            <li><strong>Verb:</strong> to draw</li>
+            <li><strong>Modifier:</strong> drawing-like/drawable</li>
+          </ul>
+          <ul class="wordEtym">
+            <li><strong>From:</strong> Arabic تَصْوِير&nbsp;taṣwīr <span class="ipa">/tasˤ.wiːr/</span></li>
+            <li><strong>Family:</strong> Afroasiatic</li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </details>
 </body>
+
 </html>
