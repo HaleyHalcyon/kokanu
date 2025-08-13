@@ -10,6 +10,7 @@ const GROUPS = {
     "teka",
   ],
   animals: [
+    "anpipi",
     "canwa",
     "cuwi",
     "hoton",
