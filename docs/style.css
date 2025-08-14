@@ -59,12 +59,34 @@ button {
   color: black;
 }
 
+.wordCarousel {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  border: 1px solid var(--text-accent);
+  padding: 0.25rem;
+}
+
+img.bigIT {
+  width: 3rem;
+  height: 3rem;
+}
+
 img.inlineIT {
   width: 1.5rem;
   height: 1.5rem;
   vertical-align: middle;
-  display: inline-block;
+  display: inline;
   mix-blend-mode: multiply;
+  transform: scale(1);
+  transition: transform 200ms;
+}
+
+img.inlineIT:hover, img.inlineIT:focus {
+  mix-blend-mode: normal;
+  transform: scale(2);
+  transition: transform 200ms;
 }
 
 #words {

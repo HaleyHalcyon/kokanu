@@ -55,9 +55,9 @@ const GROUPS = {
     "suki",
     "tajen",
     "tonko",
-    "ukiki",
   ],
   numbers: [
+    "con",
     "etu",
     "ha",
     "hen",
@@ -67,18 +67,28 @@ const GROUPS = {
     "nanku",
     "nula",
     "saka",
+    "san",
     "setan",
     "sijen",
     "tiju",
     "wan",
   ],
-  time: ["kenca", "konje", "muwesi", "sunkan", "ten"],
+  time: [
+    "conca",
+    "kenca",
+    "matin",
+    "melon",
+    "sunkan",
+    "ten",
+  ],
   directions: [
+    "inalo",
+    "jamin",
     "kali",
-    "lima",
     "malo",
     "opoki",
     "pajan",
+    "pice",
     "polan",
     "sekano",
     "sopa",
@@ -87,17 +97,26 @@ const GROUPS = {
   ],
   movement: [
     "cuma",
-    "jamin",
+    "ihamo",
     "ki",
     "kilima",
     "koman",
+    "laha",
+    "lantan",
     "lo",
     "patun",
+    "pese",
     "pucon",
+    "sun",
     "titan",
   ],
   shapes: [],
 };
+
+function jumpToWordCategory(category) {
+  document.getElementById("categories").open = true;
+  document.getElementById("category_" + category)?.scrollIntoView();
+}
 
 const reNewline = /[\r\n]+/;
 let IKAMA_TASUWI = {};
@@ -110,7 +129,7 @@ async function getDictionary() {
   list.replaceChildren(plsWait);
 
   const IKAMA_TASUWI_URL = new URL("./ikamatasuwi.tsv", window.location);
-  console.log(IKAMA_TASUWI_URL);
+  // console.log(IKAMA_TASUWI_URL);
   const itText = await fetch(IKAMA_TASUWI_URL).then((res) => res.text());
   let itTemp = itText.split(reNewline);
   IKAMA_TASUWI = Object.fromEntries(
@@ -126,12 +145,12 @@ async function getDictionary() {
         )
         .replaceAll(
           /\{(.+?)\}/g,
-          '<a href="#word_$1"><img class="inlineIT" src="./img/_$1.png" loading="lazy"> <i>$1</i></a>'
+          '<img class="inlineIT" src="./img/_$1.png" loading="lazy">&nbsp;<a href="#word_$1"><i>$1</i></a>'
         );
       return arr;
     })
   );
-  console.log(IKAMA_TASUWI);
+  // console.log(IKAMA_TASUWI);
 
   const TSV_URL =
     "https://docs.google.com/spreadsheets/d/e/2PACX-1vTVGXFd17kcvfu__zjshqiV3kW360IclOEfEdWda_K6ZCg4TY6nW2Gwn4_bs1yQeFLwrZI1_xEvSuP0/pub?gid=0&single=true&output=tsv";
@@ -142,7 +161,7 @@ async function getDictionary() {
   DICT = text.trim().split(reNewline);
   // extract the headers we want
   DICT[0] = DICT[0].split("\t");
-  console.log("DICT.at(-1)", DICT.at(-1));
+  // console.log("DICT.at(-1)", DICT.at(-1));
   const keys = {
     word: DICT[0].indexOf("Word"),
     main_pos: DICT[0].indexOf("Type"),
@@ -191,7 +210,7 @@ async function getDictionary() {
     };
   });
   DICT = DICT.filter((el) => el !== undefined);
-  console.log(DICT);
+  // console.log(DICT);
   setTimeout(() => {
     populateList();
   }, 1);
@@ -204,8 +223,15 @@ function populateList() {
   for (let i = 0; i < DICT.length; i++) {
     let el = document.createElement("li");
     el.dataset.word = DICT[i].word;
+    let wordSets = [];
     if (DICT[i].ikamaTasuwi === undefined) {
       el.classList.add("noIkamaTasuwi");
+    } else {
+      for (let category of Object.keys(GROUPS)) {
+        if (GROUPS[category].includes(DICT[i].word)) {
+          wordSets.push(category);
+        }
+      }
     }
     el.innerHTML = `
 <div class="wordHead" id="word_${DICT[i].word}">
@@ -218,7 +244,9 @@ function populateList() {
   <ul class="wordIT">
     <li><strong style="display: none;">Ikama Tasuwi:</strong> ${
       DICT[i].ikamaTasuwi || "[not found]"
-    }</li>
+    }${wordSets.length > 0 ? "<br>" + Array.from(
+      wordSets, set => `<button type="button" class="wordCategoryButton" onclick="jumpToWordCategory('${set}');">${set}</button>`
+    ).join("") : ""}</li>
   </ul>
   <ul class="wordDef">
     ${
@@ -243,7 +271,7 @@ function populateList() {
               return Array.from(
                 v.split(" "),
                 (word) =>
-                  `<a href="#word_${word}"><img class="inlineIT" src="./img/_${word}.png" loading="lazy"> <i>${word}</i></a>`
+                  `<img class="inlineIT" src="./img/_${word}.png" loading="lazy">&nbsp;<a href="#word_${word}"><i>${word}</i></a>`
               ).join(" ");
             }).join(", ") +
             "</li>"
