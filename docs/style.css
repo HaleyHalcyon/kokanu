@@ -1,13 +1,15 @@
 html {
   font-family: "Oxygen", sans-serif;
   --page-bg: #1f317b;
-  --text-accent: #ebac23;
+  --text-accent: #ffdd46;
   background-color: var(--page-bg);
 }
 
 body {
   margin: 0;
   padding: 0;
+  font-size: 1.0rem;
+  line-height: 1.5;
 }
 
 .margin {
@@ -55,6 +57,14 @@ input {
 button {
   background-color: lightgray;
   color: black;
+}
+
+img.inlineIT {
+  width: 1.5rem;
+  height: 1.5rem;
+  vertical-align: middle;
+  display: inline-block;
+  mix-blend-mode: multiply;
 }
 
 #words {

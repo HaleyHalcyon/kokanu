@@ -35,7 +35,7 @@ eme	crosshair with “approximately” sign
 enteken	SP `insa` with the dot clearly above the container, not inside it
 etu	Arabic numeral 8
 ewin	SP `luka` + SP `kiwen` upside down
-ha	Arabic numeral 2
+ha	Arabic numeral 2, not SP `tu`
 haja	heart with heartbeat monitor going through, now recognizable as a common icon for health apps
 hakiki	underlined check mark, cf. {pasu} ≡ SP `powe`
 hakoli	a molar
@@ -51,14 +51,14 @@ hinpan	excitedly squinted eyes and smile
 hon	≡ SP `la`
 honja	a simple landscape with a round tree and a triangular mountain
 hoton	≡ SP `soweli`
-hu	right/closing square bracket
+hu	stylized apostrophe
 hukun	a stickman pointing to give an order
 hunsi	hue on the bottom left for red
 husu	hand-drawn variant of a compass rose on a map
 huwa	a small circle with a sprout ({ukama}) coming out of it
 huwonho	yin-yang symbol
 ihamo	{lo} with a ring on its rear ankle, symbolizing a ball and chain
-ikasi	SP `sona` with its emitters below the document, not above
+ikasi	{wisan} SP `sona` with its emitters below the document, not above
 ili	≡ SP `anu`
 iman	a person with their hand on their chest, a common gesture for trust
 in	≡ SP `e`
@@ -68,11 +68,11 @@ inpali	a flower with at least 4 petals (visual variation allowed)
 insu	≡ SP `tomo`
 ipinto	a pretzel
 ipuwe	≡ SP `kiwen`
-iwe	“therefore” arrow
+iwe	“implies” logical symbol arrow
 ja	≡ SP `ona`
 jamin	≡ SP `teje`
 jan	map pin
-janlu	≡ SP `powe`
+janlu	× inside circle, modeled after SP `powe`
 jatan	magnifying glass icon, the icon for search
 jati	hand ({lenka}) with three dots, suggesting “a handful of” something
 je	≡ SP `pi`
@@ -87,11 +87,11 @@ kaki	lightning bolt
 kalan	a saluting stickman, from the torso up
 kalawa	hand + heart, to signify art as a “labor of love” or “expression of one’s feelings”
 kali	down arrow, with the ground underline to represent a side view
-kan	≡ SP `en` (introduces another subject)
 kanisa	head with three dots above to signify a pause to ruminate
+kan	a curly line, symbolizing two people holding hands or linking arms
 kanta	two beamed eighth notes
 kapan	angry eyebrows, puckered lips to signify disgust
-kapu	SP `ilo` with an × on its handle
+kapu	{jon} (SP `ilo`) with an × on its handle
 kate	{hakiki} with a question mark above, representing assuming something is true, then questioning whether it is
 katin	double diamond, reference to the double black diamond sign marking the hardest ski slopes and mountain bike paths
 kawa	SP `jaki` boxed
@@ -102,14 +102,13 @@ ki	{lo} with a circle under its front foot, to represent the destination
 kijeta	finger touching {ipuwe} (rock) to signify hardness
 kiju	a circle, with a smaller circle to represent its specular highlight, and an arc to represent its shadow
 kike	female sign, ≡ SP `meli` variant
-kikolo	mouth radical + goya / bitter melon
+kikolo	mouth radical + goya / bitter melon (This may change to be less Japan-specific in the future)
 kikuwa	≡ SP `nasa`
 kilima	{lo} plus up arrow
 kin	≡ SP `suno` (sun, day)
 kisa	document + mouth
 kisowa	a vertical line, with an arrow diagonally running through it
 ko	dotted outline of a circle, signifying a metaphysical variant of {sin}
-kokulen	a 4-member tournament diagram or a top-3 podium
 koman	{wip} doorway based on emergency sign, with a pair of legs entering ≡ SP `kama`
 konco	a tie, representing blue-collar work
 konen	a bell curve shape
@@ -129,7 +128,7 @@ kumon	≡ SP `lupa`
 kun	sense lines alone
 kusa	angry face
 kuto	a short line that ends with arrowheads pointing inward, cf. the Müller-Lyer illusion
-kuwan	eye + lightning bolt
+kuwan	eye ≡ SP `oko` + lightning bolt {kaki}, symbolizing the flash of lightning
 kuwekan	sprout ({ukama}) with upside down hand ({lenka}) pointing down towards it, suggesting gardening
 kuwosi	≡ SP `kili`
 la	SP `a` (interjection marker) variant in <a href='https://jackhumbert.github.io/sitelen-sa/'>Jack Humbert’s <i>sitelen sa</i></a>
@@ -138,15 +137,15 @@ laha	{lo} with its front foot stepping on chains, symbolizing freedom from const
 laki	≡ SP `linja`
 lamo	a long line that ends with arrowheads pointing outward, cf. the Müller-Lyer illusion
 lan	≡ SP `mute`
-lanki	rainbow
+lanki	paint palette
 lansa	trebuchet
 lantan	{lo} on a skateboard or some other wheeled object
 le	≡ SP `li`
-lekin	SP `taso` with a dot after it to distinguish from the “only X” meaning
+lekin	SP `taso` with a dot before it to distinguish from the “only X” meaning
 len	≡ SP `wawa`
 lenka	≡ SP `luka`
 leseka	a square split into four quadrants
-lije	one dot, almost-equal sign, three dots
+lije	one dot, almost-equals sign (cf. {pani}), three dots
 lijule	happy face with open mouth
 lika	wiggly line representing writing, ending at the point of a writing utensil. cf. {ikama}
 lili	a rectangular pit on the ground, “no break space” symbol
@@ -157,7 +156,7 @@ lipu	≡ SP `lipu`
 lisi	right-pointing finger on a box with a smoothly curved S-shape side
 lito	SP `insa` with X inside
 lo	≡ SP `tawa`
-loku	Arabic numeral 6
+loku	Arabic numeral 6 (Curve the top to distinguish from {tu})
 loso	≡ SP `ike`
 luka	≡ SP `pake`
 lun	a domino falling onto two standing dominoes, causing them to fall
@@ -182,13 +181,13 @@ mepu	a shield symbol
 mese	one dot, less-than symbol, increasing to two dots
 mi	≡ SP `mi`
 micin	≡ SP `kala`. eyes are optional
-mijalo	{sila} (SP `lawa) with dot inside the cap region
+mijalo	{sila} (SP `lawa`) with dot inside the cap region
 mita	# sign; ≡ SP `nanpa`
 momu	≡ SP `mani`, meaning changed
 mona	upside down V
 moto	SP `seli` with curved lines to symbolize flickering flame
 mu	{nin} with an underline/shadow to the right
-muku	≡ SP `uta`
+muku	≡ SP `uta`. Dot removed because ligatures are discouraged in IT
 mulu	SP `insa` with ∞ {ani} (SP `ale`) inside
 muncu	mouth + lemon
 musi	≡ SP `pipi`
@@ -209,8 +208,8 @@ ne	≡ SP `ni`
 neje	a horse’s head with three lines for its mane, resembling a chess knight
 nelo	hue triangle at the center for no hue, brightness slider at the left for dark
 nenka	downward arrow with backwards arc arrow above (cf. SP `tan` `ni`)
-nepa	bell curve shape with a tick in the middle/peak
-neso	≡ SP `sin`
+nepa	bell curve shape with an × in the middle/peak
+neso	≡ SP `sin` (cf. {talun})
 niju	circle ({sin}) with two slashes on the bottom right suggesting texture
 niku	cartoon meat-on-a-bone, cf. {umami}
 nile	hue triangle at the bottom right for blue
@@ -219,10 +218,10 @@ niwa	{insu} with a dot that “lives” inside the house
 no	left-facing arrowhead, pointing against the part-of-sentence word it negates
 non	≡ SP `kulupu`
 nula	Arabic numeral 0, also the empty set symbol ∅
-o	≡ SP `o` connected  variant in <a href='https://jackhumbert.github.io/sitelen-sa/'>Jack Humbert’s <i>sitelen
+o	≡ SP `o` connected  variant in <a href='https://jackhumbert.github.io/sitelen-sa/'>Jack Humbert’s <i>sitelen sa</i></a>
 ocota	{nin} with a halo above (cf. {hela})
 oke	checked checkbox
-okutu	eye + {onton} (SP `len` for its “hidden” meaning)
+okutu	eye ≡ SP `oko` + {onton} (SP `len` for its “hidden” meaning)
 onin	three dots supported by a straight line above and below
 onko	≡ SP `soko` variant with stroke across stem
 onton	≡ SP `len`
@@ -243,10 +242,10 @@ panta	a closed boom gate
 papon	like SP `pana` (to emit), rotated 90° and emitters coming from a box instead of hand to symbolize an opening
 pasan	smiling face, with mouth closed to distinguish from {lijule} (to laugh)
 pasu	≡ SP `powe` (false, lie)
-pata	eye (≡ SP `oko`) looking at a document
+pata	eye ≡ SP `oko` looking at a document
 patun	≡ SP `awen` (to stay, unmoving)
 pawo	pictogram of a dog’s face
-peko	a bowing head and torso (This reminded me of the Japanese onomatopoeia ペコ {peko} for bowing)
+peko	a bowing head and torso (This reminded me of the Japanese onomatopoeia ペコ *peko* for bowing)
 pela	≡ SP `pilin` (feel, feeling, heart)
 pelete	SP `sinpin` (face, front side, vertical surface, façade) without a dot
 peman	a pinky-promise, represented in Sutton SignWriting
@@ -261,7 +260,6 @@ pijen	a twisted strip, symbolizing a change
 pikante	mouth radical + chili pepper ≡ SP `namako` variant (spice, spicy, extra, embellishment)
 pilu	trophy
 pinko	a judge’s gavel and pedestal
-pintan	a 5-pointed star written in one stroke; a pentagram
 pintu	a dot, with a square to frame it
 po	ligature of SP `tan ni:` (because of this:), with the arrow pointing  the other way. cf. {pon}, {nenka}
 polan	≡ SP `sinpin` (face, front side, vertical surface, façade)
@@ -276,7 +274,7 @@ pula	color radical, circle between red and yellow to signify orange hue, slider 
 pulusi	≡ SP `akesi` (reptile, amphibian), “corrected” variant with 2 pairs of legs
 pumi	≡ SP `ma` (land, earth, country)
 sa	{nin} with {ja} pointing to the chest
-saka	Arabic numeral 9
+saka	Arabic numeral 9 (Curve the bottom to distinguish from {mi})
 sala	a “planetary model” atom with a nucleus and one electron, with an arc trail behind it
 salila	≡ SP `sijelo`
 saman	≡ SP `sama`
@@ -305,33 +303,31 @@ sinsi	a group of three houses, like SP `kulupu` made of SP `tomo`
 sipa	an upside down trophy
 sitija	a stickman sitting on a chair
 sito	≡ SP `pan`
-so	circle, slash, triangle, in a “%” formation
+so	circle, slash, triangle, in a “%” formation; cf. the “A/B testing” symbol
 solu	mouth with a ?-shaped curve coming out on top (cf. {ka})
 sone	not equals sign
 sopa	≡ SP `poka`
 soto	square enclosing a circle and triangle
 suki	≡ SP alternate `olin` that is a heart with emitters
-sula	Japanese “novice driver” symbol
-sun	≡ SP `tan`
+sula	Japanese “novice driver” symbol 🔰
+sun	{lo} with circle on back foot
 sunaja	hue triangle between bottom left (red) and bottom right (blue)
 sunkan	{ten} with dot below to represent instantaneity
 suwina	pig eyes and snout
 ta	≡ SP `te` (start quote), ultimately chosen arbitrarily
 tajali	an arrow going from a circle (a stable state) to a right-pointing triangle (“play” symbol).
-	
-	
 tajen	heart (SP `pilin`) with angry manga veins (💢)
 takaha	a hand ≡ SP `luka` rotated to hold a sword, from SP `utala` (fight, battle, aggressive)
 takilo	a drawing of a cone, with a round base and a point protruding above
 talika	≡ SP `nasin` (method, way, road).
 talili	SP `luka` (hand) + the pointer finger extending
-talun	SP `tenpo` (time) with {cina} (small).
+talun	SP `majuna` (old) with the top stroke missing, to distinguish it with {neso} (SP `sin`).
 tamaka	a circle with a burst around it symbolizing an explosion
 tamin	a scatter plot with a linear regression line through it
 tan	an arrow facing a vertical line (ultimately arbitrary)
-tapala	a drawing of a table from its side
-tason	a rightward arrow split into two harpoons, signifying a predetermined lane (cf. {pucun})
-tasuwi	a pen or other writing instrument, with a curved tail behind its tip
+tapala	a drawing of a table from its side, cf. SP `supa`
+tason	a rightward arrow split into two harpoons, signifying a predetermined lane (cf. {pucon})
+tasuwi	a pen or other writing instrument, with a curved tail behind its tip (cf. {lika})
 tati	a line in the center, with a line on either side cinching it in the middle. cf. {cenci}
 tawawa	a + sign and a circular arrow; evoking a gimbal or a gyroscope
 tawe	a head with a few locks of sideswept hair. loosely inspired by SP `linja lawa` (head-strings = hair).
@@ -351,15 +347,15 @@ tipa	≡ SP `poki` (container, bag, box)
 titan	{lo} + rotated SP `nasin` (path)
 titi	crude drawing of two boobs, looks like SP `wile` (to want, to need, desire)
 tolu	an isometric drawing of a cylinder
-tomiwa	SP `ilo` (tool) with a check mark on its handle
+tomiwa	{jon} (SP `ilo`) with a check mark on its handle
 tonko	squinting eyes with a grimacing mouth, signifying wincing in pain
 tope	≡ SP `pona` (good, simple)
-tu	≡ SP `sina`, pointing up towards the reader
-tuko	like SP `seli` (heat, fire) with curved lines to distinguish from {moto}
+tu	≡ SP `sina`, pointing up towards the reader (the finger may be on the left side as in SP, or on the right side for symmetry)
+tuko	≡ SP `seli` (heat, fire)
 tula	a winding road, with a map pin (cf. {jan}) on the far side
 tun	≡ SP `pali` (to do, to make, to work)
 tuntan	circle with check mark
-tusa	color radical, circle in middle to signify no hue, slider in the middle to signify medium brightness
+tusa	color radical, circle in middle to signify no hue
 ujanu	head with a simple line as the torso; rotated SP `lape`
 ukama	≡ SP `kasi`
 ukiki	a head with two dot eyes and large ears, looking like the Rhythm Heaven monkeys or Cheburashka
@@ -367,7 +363,7 @@ uli	180° rotated SP `wawa`
 ulokan	hexagon with circle inside, the side view of a nut (a metal fastener)
 umami	mouth + cartoon meat-on-a-bone, cf. {niku}
 umo	a cartoon cloud with a wispy tail
-un	SP `en`
+un	SP `en`, cf. {kan}, {uta}
 unitu	two {renka}-s facing each other in a handshake
 usen	{tu} and {mi} pointing at each other
 uta	handwritten ampersand (ɛ + |)
@@ -381,5 +377,5 @@ wen	Reed-Kellogg sentence diagramming symbol for phrases and clauses that occupy
 wi	
 wija	SP `nasin` with backwards arc arrow above
 wiki	the “fast forward” audio symbol
-wisan	≡ SP `sona`
+wisan	≡ SP `sona` (cf. {ikasi})
 wonpa	≡ SP `unpa`
