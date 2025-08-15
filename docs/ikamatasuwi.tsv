@@ -1,4 +1,3 @@
-ikama	≡ SP `nimi`
 akala	hand + two ends of a stick being held by it
 akasa	sun with an arch above symbolizing the sky
 alu	≡ SP `lanpan`
@@ -58,6 +57,7 @@ husu	hand-drawn variant of a compass rose on a map
 huwa	a small circle with a sprout ({ukama}) coming out of it
 huwonho	yin-yang symbol
 ihamo	{lo} with a ring on its rear ankle, symbolizing a ball and chain
+ikama	≡ SP `nimi`
 ikasi	{wisan} SP `sona` with its emitters below the document, not above
 ili	≡ SP `anu`
 iman	a person with their hand on their chest, a common gesture for trust
@@ -344,7 +344,7 @@ tiku	≡ SP `moli` (die, dead)
 tile	the “slow” audio symbol
 tinki	three lines, progressively growing, with a crown on the tallest one
 tipa	≡ SP `poki` (container, bag, box)
-titan	{lo} + rotated SP `nasin` (path)
+titan	{lo} + 90° rotated SP `nasin` (path)
 titi	crude drawing of two boobs, looks like SP `wile` (to want, to need, desire)
 tolu	an isometric drawing of a cylinder
 tomiwa	{jon} (SP `ilo`) with a check mark on its handle
@@ -374,7 +374,7 @@ wan	≡ SP `wan`, Arabic numeral 1
 wanku	curved line above floor/ground
 watan	≡ SP `sike`
 wen	Reed-Kellogg sentence diagramming symbol for phrases and clauses that occupy the subject or complement slot
-wi	
+wi	[WIP] Make up a new unambiguous grammatical particle glyph
 wija	SP `nasin` with backwards arc arrow above
 wiki	the “fast forward” audio symbol
 wisan	≡ SP `sona` (cf. {ikasi})
