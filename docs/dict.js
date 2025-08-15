@@ -145,7 +145,7 @@ async function getDictionary() {
         )
         .replaceAll(
           /\{(.+?)\}/g,
-          '<img class="inlineIT" src="./img/_$1.png" loading="lazy">&nbsp;<a href="#word_$1"><i>$1</i></a>'
+          '<img class="inlineIT" src="./img/_$1.png" loading="lazy"><a href="#word_$1"> <i>$1</i></a>'
         );
       return arr;
     })
