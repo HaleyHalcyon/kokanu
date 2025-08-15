@@ -447,42 +447,62 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     testTimeout = setTimeout(() => {
       testOutput.innerHTML = "";
-      let splitBySpaces = testInput.value.split(/(\s+|\W+)/g);
+      let splitBySpaces = testInput.value.split(/([a-z]+)/g);
       console.log(splitBySpaces);
+      // odd indices: word was found?
+      // even indices: whitespace only?
+      let flag = Array.from(splitBySpaces, (v, k) =>
+        (k % 2) ? (
+          // potential word
+          DICT.some(dictEntry => dictEntry.word === v)
+        ) : (
+          // whitespace/punctuation
+          v.trim() === ""
+        )
+      );
+      console.log(flag);
+      const spanIt = text => {
+        let span = document.createElement("SPAN");
+        span.innerText = text;
+        return span;
+      }
+      const imgIt = v => {
+        let img = document.createElement("IMG");
+        img.title = v;
+        img.src = "./img/_" + v + ".png";
+        img.loading = "lazy";
+        return img;
+      }
       for (let i = 0; i < splitBySpaces.length; i++) {
         if (i % 2) {
-          if (splitBySpaces[i].includes("\n")) {
-            testOutput.appendChild(document.createElement("BR"));
-          } else if (splitBySpaces[i].trim() === "") {
-            continue;
+          // potential word
+          if (flag[i]) {
+            testOutput.appendChild(imgIt(splitBySpaces[i]));
           } else {
-            let span = document.createElement("SPAN");
-            span.innerText = splitBySpaces[i];
-            testOutput.appendChild(span);
+            testOutput.appendChild(spanIt(splitBySpaces[i]));
           }
         } else {
-          if (splitBySpaces[i] === "") {continue;}
-          if (
-            splitBySpaces[i] !== splitBySpaces[i].toLowerCase()
-          ) {
-            let span = document.createElement("SPAN");
-            span.innerText = splitBySpaces[i];
-            testOutput.appendChild(span);
+          // whitespace/punctuation
+          if (flag[i] && (flag[i - 1] || flag[i + i])) {
             continue;
-          }
-          const result = DICT.findIndex(v => v.word === splitBySpaces[i]);
-          if (result === -1) {
-            let span = document.createElement("SPAN");
-            span.innerText = splitBySpaces[i];
-            testOutput.appendChild(span);
           } else {
-            let img = document.createElement("IMG");
-            img.title = splitBySpaces[i];
-            img.src = "./img/_" + splitBySpaces[i] + ".png";
-            img.loading = "lazy";
-            testOutput.appendChild(img);
+            testOutput.appendChild(spanIt(splitBySpaces[i]));
           }
         }
+      }
+      // merge consecutive spans
+      let i = testOutput.children.length;
+      while (i > 1) {
+        i--;
+        if (testOutput.children[i].nodeName !== "SPAN") {
+          continue;
+        }
+        if (testOutput.children[i - 1].nodeName !== "SPAN") {
+          testOutput.children[i].innerText = testOutput.children[i].innerText.trim();
+          continue;
+        }
+        testOutput.children[i - 1].innerText += testOutput.children[i].innerText;
+        testOutput.removeChild(testOutput.children[i]);
       }
     }, 700);
   });

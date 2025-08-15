@@ -39,9 +39,10 @@ summary + * {
 }
 
 blockquote.warning {
-  border: 0.5rem solid var(--text-accent);
-  margin: 0;
+  margin: 0.5rem;
   padding: 0.5rem;
+  background-color: white;
+  border: 0.5rem solid orangered;
 }
 
 blockquote.warning > b:first-child {
@@ -87,7 +88,7 @@ textarea {
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  border: 1px solid var(--text-accent);
+  border: 0.0625rem solid var(--text-accent);
   padding: 0.25rem;
 }
 
@@ -231,16 +232,21 @@ img.inlineIT:hover, img.inlineIT:focus {
   display: none;
 }
 
-#ikamaTasuwiPreview {
-  border: 2px solid var(--text-accent);
+.itPreview {
+  border: 0.0625rem solid var(--text-accent);
   color: var(--page-bg);
   font-size: 1.5rem;
   line-height: 2.5rem;
+  white-space-collapse: collapse;
 }
 
-#ikamaTasuwiPreview > img {
+.itPreview > img {
   width: 2.5rem;
   height: auto;
   display: inline;
   vertical-align: middle;
+}
+
+.itPreview.centered {
+  text-align: center;
 }
