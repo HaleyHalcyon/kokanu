@@ -64,6 +64,7 @@ const GROUPS = {
     "hu",
     "lima",
     "loku",
+    "mita",
     "nanku",
     "nula",
     "saka",
@@ -78,13 +79,16 @@ const GROUPS = {
     "kenca",
     "matin",
     "melon",
+    "sikin",
     "sunkan",
     "ten",
   ],
   directions: [
+    "enteken",
     "inalo",
     "jamin",
     "kali",
+    "limijen",
     "malo",
     "opoki",
     "pajan",
@@ -110,7 +114,37 @@ const GROUPS = {
     "sun",
     "titan",
   ],
-  shapes: [],
+  shapes: [
+    "ankolo",
+    "asa",
+    "cenci",
+    "cenpo",
+    "cina",
+    "cohi",
+    "kiju",
+    "kumon",
+    "kuto",
+    "laki",
+    "lamo",
+    "leseka",
+    "macun",
+    "mona",
+    "mutakin",
+    "niju",
+    "pansin",
+    "pintu",
+    "poloko",
+    "powele",
+    "satilu",
+    "sincuwan",
+    "soto",
+    "takilo",
+    "tati",
+    "tenja",
+    "tolu",
+    "wanku",
+    "watan",
+  ],
 };
 
 function jumpToWordCategory(category) {
@@ -145,7 +179,7 @@ async function getDictionary() {
         )
         .replaceAll(
           /\{(.+?)\}/g,
-          '<img class="inlineIT" src="./img/_$1.png" loading="lazy"><a href="#word_$1"> <i>$1</i></a>'
+          '<img class="inlineIT" src="./img/_$1.png" title="$1" loading="lazy"><a href="#word_$1"> <i>$1</i></a>'
         );
       return arr;
     })
@@ -247,7 +281,11 @@ function populateList() {
 </div><div class="wordBody">
   <ul class="wordIT">
     <li><strong style="display: none;">Ikama Tasuwi:</strong> ${
-      DICT[i].ikamaTasuwi || "[not found]"
+      (
+        DICT[i].ikamaTasuwi.includes("[WIP]") ?
+        Array.from(DICT[i].ikamaTasuwi.split("[WIP]"), e => e.trim()).join('<br /><span class="wip">') + "</span>" :
+        DICT[i].ikamaTasuwi
+      ) || "[not found]"
     }${wordSets.length > 0 ? "<br>" + Array.from(
       wordSets, set => `<button type="button" class="wordCategoryButton" onclick="jumpToWordCategory('${set}');">${set}</button>`
     ).join("") : ""}</li>
@@ -270,12 +308,12 @@ function populateList() {
     }
     ${
       DICT[i].def.antonym
-        ? `<li><strong>Antonym${DICT[i].def.antonym.includes("/") ? "s" : ""}:</strong> ` +
+        ? `<li class="antonym"><strong>Antonym${DICT[i].def.antonym.includes("/") ? "s" : ""}:</strong> ` +
             Array.from(DICT[i].def.antonym.split("/"), (v) => {
               return Array.from(
                 v.split(" "),
                 (word) =>
-                  `<img class="inlineIT" src="./img/_${word}.png" loading="lazy">&nbsp;<a href="#word_${word}"><i>${word}</i></a>`
+                  `<img class="inlineIT" src="./img/_${word}.png" title="${word}" loading="lazy">&nbsp;<a href="#word_${word}"><i>${word}</i></a>`
               ).join(" ");
             }).join(", ") +
             "</li>"
@@ -306,14 +344,18 @@ function populateList() {
 }
 
 function normalSortElements(a, b) {
-  return a.dataset.word.localeCompare(b.dataset.word);
+  if (typeof a !== "string") {a = a.dataset.word;}
+  if (typeof b !== "string") {b = b.dataset.word;}
+  return a.localeCompare(b);
 }
 const LIKANU_ORDER = "ptkcwljmnshNaieou";
 const CODA_N = /([aeiou])n($|[^aeiou])/g;
 function likanuSortElements(a, b) {
+  if (typeof a !== "string") {a = a.dataset.word;}
+  if (typeof b !== "string") {b = b.dataset.word;}
   return likanuSortRecursive(
-    a.dataset.word.replaceAll(CODA_N, "$1N$2"),
-    b.dataset.word.replaceAll(CODA_N, "$1N$2")
+    a.replaceAll(CODA_N, "$1N$2"),
+    b.replaceAll(CODA_N, "$1N$2")
   );
 }
 function likanuSortRecursive(a, b) {
@@ -394,5 +436,54 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     console.log(c);
     list.replaceChildren(...c);
+  });
+
+  const testInput = document.getElementById("ikamaTasuwiTryout");
+  const testOutput = document.getElementById("ikamaTasuwiPreview");
+  let testTimeout = -1;
+  testInput.addEventListener("input", event => {
+    if (testTimeout !== -1) {
+      clearTimeout(testTimeout);
+    }
+    testTimeout = setTimeout(() => {
+      testOutput.innerHTML = "";
+      let splitBySpaces = testInput.value.split(/(\s+|\W+)/g);
+      console.log(splitBySpaces);
+      for (let i = 0; i < splitBySpaces.length; i++) {
+        if (i % 2) {
+          if (splitBySpaces[i].includes("\n")) {
+            testOutput.appendChild(document.createElement("BR"));
+          } else if (splitBySpaces[i].trim() === "") {
+            continue;
+          } else {
+            let span = document.createElement("SPAN");
+            span.innerText = splitBySpaces[i];
+            testOutput.appendChild(span);
+          }
+        } else {
+          if (splitBySpaces[i] === "") {continue;}
+          if (
+            splitBySpaces[i] !== splitBySpaces[i].toLowerCase()
+          ) {
+            let span = document.createElement("SPAN");
+            span.innerText = splitBySpaces[i];
+            testOutput.appendChild(span);
+            continue;
+          }
+          const result = DICT.findIndex(v => v.word === splitBySpaces[i]);
+          if (result === -1) {
+            let span = document.createElement("SPAN");
+            span.innerText = splitBySpaces[i];
+            testOutput.appendChild(span);
+          } else {
+            let img = document.createElement("IMG");
+            img.title = splitBySpaces[i];
+            img.src = "./img/_" + splitBySpaces[i] + ".png";
+            img.loading = "lazy";
+            testOutput.appendChild(img);
+          }
+        }
+      }
+    }, 700);
   });
 });
