@@ -224,7 +224,11 @@ function populateList() {
     let el = document.createElement("li");
     el.dataset.word = DICT[i].word;
     let wordSets = [];
-    if (DICT[i].ikamaTasuwi === undefined) {
+    if (
+      DICT[i].ikamaTasuwi === undefined
+      ||
+      DICT[i].ikamaTasuwi.includes("[WIP]")
+    ) {
       el.classList.add("noIkamaTasuwi");
     } else {
       for (let category of Object.keys(GROUPS)) {
