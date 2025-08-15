@@ -28,14 +28,14 @@ conca	{ten} with left-right arrow representing an ongoing event, with a tick bel
 conpu	straight forward arrow, arcing arrow from its end back to its start
 conto	drawing of a mechanical arm, like the Steam logo
 cuma	the “emergency exit” pictogram, with just the legs from SP `tawa`
-cune	≡ SP `majuna`
-cuwi	drawing of a mouse, ≈ SP `misa`
+cune	≡ SP `majuna` [WIP] There’s gotta be a better way with these three.
+cuwi	drawing of a mouse, different simplification from SP `misa`
 eme	crosshair with “approximately” sign
 enteken	SP `insa` with the dot clearly above the container, not inside it
 etu	Arabic numeral 8
 ewin	SP `luka` + SP `kiwen` upside down
 ha	Arabic numeral 2, not SP `tu`
-haja	heart with heartbeat monitor going through, now recognizable as a common icon for health apps
+haja	heart with heartbeat monitor going through, now recognizable as a common icon for health apps [WIP] Is it fine that they’re not visibly antonyms?
 hakiki	underlined check mark, cf. {pasu} ≡ SP `powe`
 hakoli	a molar
 haluko	{puka} upside down
@@ -209,7 +209,7 @@ neje	a horse’s head with three lines for its mane, resembling a chess knight
 nelo	hue triangle at the center for no hue, brightness slider at the left for dark
 nenka	downward arrow with backwards arc arrow above (cf. SP `tan` `ni`)
 nepa	bell curve shape with an × in the middle/peak
-neso	≡ SP `sin` (cf. {talun})
+neso	≡ SP `sin` (cf. {talun}) [WIP] There’s gotta be a better way with these three.
 niju	circle ({sin}) with two slashes on the bottom right suggesting texture
 niku	cartoon meat-on-a-bone, cf. {umami}
 nile	hue triangle at the bottom right for blue
@@ -321,7 +321,7 @@ takaha	a hand ≡ SP `luka` rotated to hold a sword, from SP `utala` (fight, bat
 takilo	a drawing of a cone, with a round base and a point protruding above
 talika	≡ SP `nasin` (method, way, road).
 talili	SP `luka` (hand) + the pointer finger extending
-talun	SP `majuna` (old) with the top stroke missing, to distinguish it with {neso} (SP `sin`).
+talun	SP `majuna` (old) with the top stroke missing, to distinguish it with {neso} (SP `sin`). [WIP] There’s gotta be a better way with these three.
 tamaka	a circle with a burst around it symbolizing an explosion
 tamin	a scatter plot with a linear regression line through it
 tan	an arrow facing a vertical line (ultimately arbitrary)
@@ -340,7 +340,7 @@ tenja	two lines, with the center bulging out. cf. {satilu}
 tepu	≡ SP `open` (open, start, begin)
 tijante	head + sense radical
 tiju	Roman numeral for 10 (X), serif on top and bottom
-tiku	≡ SP `moli` (die, dead)
+tiku	≡ SP `moli` (die, dead) [WIP] Is it fine that they’re not visibly antonyms?
 tile	the “slow” audio symbol
 tinki	three lines, progressively growing, with a crown on the tallest one [WIP] Do we need the crown, or does removing it feel like “mobile signal strength”? Match with {konkulen}?
 tipa	≡ SP `poki` (container, bag, box)
@@ -350,7 +350,7 @@ tolu	an isometric drawing of a cylinder
 tomiwa	{jon} (SP `ilo`) with a check mark on its handle
 tonko	squinting eyes with a grimacing mouth, signifying wincing in pain
 tope	≡ SP `pona` (good, simple)
-tu	≡ SP `sina`, pointing up towards the reader (the finger may be on the left side as in SP, or on the right side for symmetry)
+tu	≡ SP `sina`, pointing up towards the reader (the finger may be on the left side as in SP, or on the right side for symmetry, cf. {usen})
 tuko	≡ SP `seli` (heat, fire)
 tula	a winding road, with a map pin (cf. {jan}) on the far side
 tun	≡ SP `pali` (to do, to make, to work)
