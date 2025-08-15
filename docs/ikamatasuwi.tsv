@@ -98,7 +98,7 @@ kawa	SP `jaki` boxed
 kela	≡ SP `musi` (fun, entertainment, frivolous, art)
 kemika	a triangle flask with some kind of liquid in it
 kenca	horizontal row of three circles, with an arrow pointing down to the middle circle
-ki	{lo} with a circle under its front foot, to represent the destination
+ki	{lo} with a circle under its front foot, to represent the destination [WIP] Change to disambiguate from {laha}?
 kijeta	finger touching {ipuwe} (rock) to signify hardness
 kiju	a circle, with a smaller circle to represent its specular highlight, and an arc to represent its shadow
 kike	female sign, ≡ SP `meli` variant
@@ -151,8 +151,8 @@ lika	wiggly line representing writing, ending at the point of a writing utensil.
 lili	a rectangular pit on the ground, “no break space” symbol
 lima	Arabic numeral 5
 limijen	≡ SP `insa`
-lipan	≡ SP `weka`
-lipu	≡ SP `lipu`
+lipan	≡ SP `weka` ([WIP] Should it be SP `powe` to contrast with *se*?)
+lipu	≡ SP `lipu`. Slightly vertical rectangle preferred.
 lisi	right-pointing finger on a box with a smoothly curved S-shape side
 lito	SP `insa` with X inside
 lo	≡ SP `tawa`
@@ -174,7 +174,7 @@ matin	horizontal row of three circles, with an arc arrow from the second to the 
 matuwa	≡ SP `mama`
 meja	outline of the sides and top of a cat’s head, with dot eyes and a simplified mouth
 melon	horizontal row of three circles, with an arc arrow from the second to the third
-men	SP `en` + arrowhead in analogy with SP `li` and SP `e`
+men	SP `en` + arrowhead in analogy with SP `li` and {in} SP `e`
 menu	two dot, greater-than symbol, reducing to one dot
 menwo	upside down {matuwa} (SP `mama`)
 mepu	a shield symbol
@@ -310,7 +310,7 @@ sopa	≡ SP `poka`
 soto	square enclosing a circle and triangle
 suki	≡ SP alternate `olin` that is a heart with emitters
 sula	Japanese “novice driver” symbol 🔰
-sun	{lo} with circle on back foot
+sun	{lo} with circle on back foot [WIP] Change to disambiguate from {ihamo}?
 sunaja	hue triangle between bottom left (red) and bottom right (blue)
 sunkan	{ten} with dot below to represent instantaneity
 suwina	pig eyes and snout
