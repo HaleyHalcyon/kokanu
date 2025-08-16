@@ -457,7 +457,7 @@ document.addEventListener("DOMContentLoaded", () => {
           DICT.some(dictEntry => dictEntry.word === v)
         ) : (
           // whitespace/punctuation
-          v.trim() === ""
+          v.trim() === "" && !v.includes("\n")
         )
       );
       console.log(flag);
@@ -486,7 +486,16 @@ document.addEventListener("DOMContentLoaded", () => {
           if (flag[i] && (flag[i - 1] || flag[i + i])) {
             continue;
           } else {
-            testOutput.appendChild(spanIt(splitBySpaces[i]));
+            splitBySpaces[i].split("\n").forEach(
+              (part, i) => {
+                if (i > 0) {
+                  testOutput.appendChild(
+                    document.createElement("BR")
+                  );
+                }
+                testOutput.appendChild(spanIt(part));
+              }
+            );
           }
         }
       }
