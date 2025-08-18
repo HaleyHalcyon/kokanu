@@ -447,7 +447,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     testTimeout = setTimeout(() => {
       testOutput.innerHTML = "";
-      let splitBySpaces = testInput.value.split(/([a-z]+)/g);
+      let splitBySpaces = testInput.value.split(/(\p{L}+)/gu);
       console.log(splitBySpaces);
       // odd indices: word was found?
       // even indices: whitespace only?
