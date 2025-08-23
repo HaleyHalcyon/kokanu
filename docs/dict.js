@@ -155,6 +155,20 @@ function jumpToWordCategory(category) {
 const reNewline = /[\r\n]+/;
 let IKAMA_TASUWI = {};
 let DICT = [];
+const DICT_EASTER_EGGS = [
+  {
+    word: "Kokanu",
+    filename: "ligature_kokanu",
+  },
+  {
+    word: "kijetesantakalu",
+    filename: "_kijetesantakalu",
+  },
+  {
+    word: "Tokipona",
+    filename: "ligature_toki_pona",
+  },
+]
 
 async function getDictionary() {
   const list = document.getElementById("words");
@@ -166,25 +180,37 @@ async function getDictionary() {
   // console.log(IKAMA_TASUWI_URL);
   const itText = await fetch(IKAMA_TASUWI_URL).then((res) => res.text());
   let itTemp = itText.split(reNewline);
+  const itHeader = itTemp[0].split("\t");
+  const itKeys = {
+    "word": itHeader.indexOf("word"),
+    "desc": itHeader.indexOf("desc"),
+  }
+  // console.log(itHeader, "itKeys", itKeys)
+  itTemp.splice(0, 1);
   IKAMA_TASUWI = Object.fromEntries(
     Array.from(itTemp, (row) => {
       let arr = row.split("\t");
-      if (arr.length == 1) {
-        arr[1] = "[NOT FOUND]";
+      let entry = [
+        arr[itKeys.word],
+        {
+          "desc": arr.at(itKeys.desc)
+        }
+      ];
+      if (entry[1].desc !== undefined) {
+        entry[1].desc = entry[1].desc
+          .replaceAll(
+            /`(.+?)`/g,
+            '<a href="https://nimi.li/$1" target="_blank" class="tp"><i>$1</i></a>'
+          )
+          .replaceAll(
+            /\{(.+?)\}/g,
+            '<img class="inlineIT" src="./img/_$1.png" title="$1" loading="lazy"><a href="#word_$1"> <i>$1</i></a>'
+          );
       }
-      arr[1] = arr[1]
-        .replaceAll(
-          /`(.+?)`/g,
-          '<a href="https://nimi.li/$1" target="_blank" class="tp"><i>$1</i></a>'
-        )
-        .replaceAll(
-          /\{(.+?)\}/g,
-          '<img class="inlineIT" src="./img/_$1.png" title="$1" loading="lazy"><a href="#word_$1"> <i>$1</i></a>'
-        );
-      return arr;
+      return entry;
     })
   );
-  // console.log(IKAMA_TASUWI);
+  console.log("IKAMA_TASUWI", IKAMA_TASUWI);
 
   const TSV_URL =
     "https://docs.google.com/spreadsheets/d/e/2PACX-1vTVGXFd17kcvfu__zjshqiV3kW360IclOEfEdWda_K6ZCg4TY6nW2Gwn4_bs1yQeFLwrZI1_xEvSuP0/pub?gid=0&single=true&output=tsv";
@@ -214,7 +240,7 @@ async function getDictionary() {
   // assemble the dictionary
   DICT = Array.from(DICT, (el) => {
     let array = el.split("\t");
-    let ikama_tasuwi = IKAMA_TASUWI[array[keys.word]] || undefined;
+    let ikama_tasuwi = IKAMA_TASUWI[array[keys.word]].desc || undefined;
     // There is an incomplete line after `tepu` in the source CSV. Skip over this, and remove undefined element later
     if (array[keys.word] == "") {
       return undefined;
@@ -447,17 +473,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     testTimeout = setTimeout(() => {
       testOutput.innerHTML = "";
-      let splitBySpaces = testInput.value.split(/([a-z]+)/g);
+      let splitBySpaces = testInput.value.split(/(\p{L}+)/gu);
       console.log(splitBySpaces);
+      const useEasterEggs = document.getElementById("previewEasterEggs").checked === true;
       // odd indices: word was found?
       // even indices: whitespace only?
       let flag = Array.from(splitBySpaces, (v, k) =>
         (k % 2) ? (
           // potential word
-          DICT.some(dictEntry => dictEntry.word === v)
+          DICT.some(dictEntry => dictEntry.word === v ? 1 : 0) || (useEasterEggs ? DICT_EASTER_EGGS.some(dictEntry => dictEntry.word === v) ? 2 : 0 : 0)
         ) : (
           // whitespace/punctuation
-          v.trim() === ""
+          v.trim() === "" ? 1 : 0
         )
       );
       console.log(flag);
@@ -466,26 +493,43 @@ document.addEventListener("DOMContentLoaded", () => {
         span.innerText = text;
         return span;
       }
-      const imgIt = v => {
+      const imgIt = (v) => {
         let img = document.createElement("IMG");
         img.title = v;
         img.src = "./img/_" + v + ".png";
         img.loading = "lazy";
         return img;
       }
+      const imgItEE = (v) => {
+        let img = document.createElement("IMG");
+        img.title = v;
+        img.src = "./img/" + DICT_EASTER_EGGS.find(entry => entry.word == v).filename + ".png";
+        img.loading = "lazy";
+        return img;
+      }
       for (let i = 0; i < splitBySpaces.length; i++) {
         if (i % 2) {
           // potential word
-          if (flag[i]) {
+          if (flag[i] == 2) {
+            testOutput.appendChild(imgItEE(splitBySpaces[i]));
+          } else if (flag[i] == 1) {
             testOutput.appendChild(imgIt(splitBySpaces[i]));
           } else {
             testOutput.appendChild(spanIt(splitBySpaces[i]));
           }
         } else {
           // whitespace/punctuation
-          if (flag[i] && (flag[i - 1] || flag[i + i])) {
-            continue;
+          if (flag[i]) {
+            // only whitespace
+            if (i === 0 || i === splitBySpaces.length - 1 || flag[i - 1] || flag[i + 1]) {
+              console.log("whitespace only skipped");
+              continue;
+            } else {
+              console.log("whitespace only added");
+              testOutput.lastChild.innerText += splitBySpaces[i];
+            }
           } else {
+            console.log("whitespace/punctuation added")
             testOutput.appendChild(spanIt(splitBySpaces[i]));
           }
         }
