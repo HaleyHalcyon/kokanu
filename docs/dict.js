@@ -485,6 +485,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ) : (
           // whitespace/punctuation
           v.trim() === "" ? 1 : 0
+          v.trim() === "" && !v.includes("\n") ? 1 : 0
         )
       );
       console.log(flag);
@@ -529,8 +530,16 @@ document.addEventListener("DOMContentLoaded", () => {
               testOutput.lastChild.innerText += splitBySpaces[i];
             }
           } else {
-            console.log("whitespace/punctuation added")
-            testOutput.appendChild(spanIt(splitBySpaces[i]));
+            splitBySpaces[i].split("\n").forEach(
+              (part, i) => {
+                if (i > 0) {
+                  testOutput.appendChild(
+                    document.createElement("BR")
+                  );
+                }
+                testOutput.appendChild(spanIt(part));
+              }
+            );
           }
         }
       }
