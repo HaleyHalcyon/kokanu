@@ -4,7 +4,7 @@ a Sitelen Pona descendant for the Kokanu IAL
 * [interactive dictionary and test drive](https://haleyhalcyon.github.io/kokanu)
 
 ## About
-Ikama Tasuwi (Drawn Words) is a Sitelenponido for [Kokanu, the Minimal IAL](https://kokanu.com). It was made as an attempt to bridge the gap between Kokanu and its parent language Toki Pona, while reflecting how far it has diverged from it.
+Ikama Tasuwi (Drawn Words) is a Sitelenponido (i.e. writing system descended from Sitelen Pona) for [Kokanu, the Minimal IAL](https://kokanu.com). It was made as an attempt to bridge the gap between Kokanu and its parent language Toki Pona, while reflecting how far it has diverged from it.
 
 ## Design goals
 * If there is a directly corresponding word in Toki Pona, use that Sitelen Pona, except for:
