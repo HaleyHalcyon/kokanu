@@ -484,7 +484,7 @@ document.addEventListener("DOMContentLoaded", () => {
           DICT.some(dictEntry => dictEntry.word === v ? 1 : 0) || (useEasterEggs ? DICT_EASTER_EGGS.some(dictEntry => dictEntry.word === v) ? 2 : 0 : 0)
         ) : (
           // whitespace/punctuation
-          v.trim() === "" ? 1 : 0
+          v.trim() === "" ? 1 : 
           v.trim() === "" && !v.includes("\n") ? 1 : 0
         )
       );
