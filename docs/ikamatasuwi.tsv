@@ -1,4 +1,5 @@
 word	desc	islands	fills	splits	ends	dots	tags
+							
 akala	{lenka} grabbing a stick, with the ends visible from either side of the palm	1	0	2	4	0	hand
 akasa	sun with an arch above symbolizing the sky	2	1	4	6	0	sun
 alu	≡ SP `lanpan`	2	1	1	1	1	
@@ -41,7 +42,7 @@ hakiki	underlined check mark, cf. {pasu} ≡ SP `powe`	2	0	0	4	0	check
 hakoli	a molar	1	1	0	0	0	
 haluko	{puka} upside down	1	2	1	0	0	
 han	≡ SP `jo`	1	1	1	1	0	
-hapijo	an app icon with a notification dot on the top right [WIP] Too terminally online?	1	2	2	0	0	square
+hapijo	a bugle	1	2	2	1	0	
 haso	two arrows moving up and down, also tracing the form of the lowercase χ	1	0	3	6	0	arrow
 he	mouth + {tu} above	2	2	1	1	0	mouth
 hela	head with halo above (cf. {ocota}) [WIP] Too close to ocota	2	2	0	0	0	
@@ -154,143 +155,143 @@ lima	Arabic numeral 5	1	0	1	3	0	number
 limijen	≡ SP `insa`	2	0	0	2	1	
 lipan	≡ SP `weka` ([WIP] Should it be SP `powe` to contrast with *se*? But {pasu} is already powe.)	4	0	0	8	0	
 lipu	≡ SP `lipu`. Slightly vertical rectangle preferred.	1	1	0	0	0	square
-lisi	right-pointing finger on a box with a smoothly curved S-shape side						
-lito	SP `insa` with X inside						
-lo	≡ SP `tawa`						
-loku	Arabic numeral 6 (Curve the top to distinguish from {tu})						
-loso	≡ SP `ike`						
-luka	≡ SP `pake`						
-lun	a domino falling onto two standing dominoes, causing them to fall						
+lisi	right-pointing finger on a box with a smoothly curved S-shape side	2	2	1	1	0	
+lito	SP `insa` with X inside	2	0	1	6	0	
+lo	≡ SP `tawa`	1	0	0	2	0	legs
+loku	Arabic numeral 6 (Curve the top to distinguish from {tu})	1	1	1	1	0	number
+loso	≡ SP `ike`	1	0	0	1	0	
+luka	≡ SP `pake`	1	0	1	3	0	letter
+lun	a domino falling onto two standing dominoes, causing them to fall	3	0	0	6	0	
 lunti	hue triangle between yellow (top) and blue (bottom right)	1	2	1	0	0	triangle
-luwa	"Pac-Man ghost outline (similar to lipamanka’s <a href=""https://sona.pona.la/wiki/Name_glyphs"" target=""_blank"">name glyph</a> for <a href=""https://len.la"" target=""_blank"">len len</a>)"						
-maciko	≡ SP `usawi`						
-macun	like SP `ko` with a flat bottom, as a side view of a paste-like object						
-makan	≡ SP `moku`						
-maku	Mars symbol, ≡ SP `mije` variant						
-malo	≡ SP `sewi` secular variant						
-mamaki	surprised face with open mouth						
-mani	placeholder currency sign: ¤						
-matija	≡ SP `meso`						
-matin	horizontal row of three circles, with an arc arrow from the second to the first						
-matuwa	≡ SP `mama`						
-meja	outline of the sides and top of a cat’s head, with dot eyes and a simplified mouth (inspired by Pusheen, completely different from `kisa`)						
-melon	horizontal row of three circles, with an arc arrow from the second to the third						
-men	SP `en` + arrowhead in analogy with SP `li` and {in} SP `e`						
-menu	two dot, greater-than symbol, reducing to one dot						
-menwo	upside down {matuwa} (SP `mama`)						
-mepu	a shield symbol						
-mese	one dot, less-than symbol, increasing to two dots						
-mi	≡ SP `mi`						
-micin	≡ SP `kala`. eyes are optional						
-mijalo	{sila} (SP `lawa`) with dot inside the cap region						
-mita	# sign; ≡ SP `nanpa`						
-momu	≡ SP `mani`, meaning changed						
-mona	upside down V						
-moto	SP `seli` with curved lines to symbolize flickering flame						
-mu	{nin} with an underline/shadow to the right						
-muku	≡ SP `uta`. Dot removed because ligatures are discouraged in IT						
-mulu	SP `insa` with ∞ {ani} (SP `ale`) inside						
-muncu	mouth + lemon						
-musi	≡ SP `pipi`						
-mutakin	rightward arrow reinforced by straight line above and below						
-muwesi	≡ SP `mun`						
-na	≡ SP `ni`, flipped variant						
-naki	square with sparkles inside, symbolizing a squeaky-clean state						
-nalan	rightward finger pushing on a box with a concave left side						
+luwa	"Pac-Man ghost outline (similar to lipamanka’s <a href=""https://sona.pona.la/wiki/Name_glyphs"" target=""_blank"">name glyph</a> for <a href=""https://len.la"" target=""_blank"">len len</a>)"	1	1	0	0	0	
+maciko	≡ SP `usawi`	4	0	0	8	0	
+macun	like SP `ko` with a flat bottom, as a side view of a paste-like object	1	1	0	0	0	
+makan	≡ SP `moku`	1	1	1	2	0	hand, mouth
+maku	Mars symbol, ≡ SP `mije` variant	1	1	2	2	0	
+malo	≡ SP `sewi` secular variant	2	0	0	2	1	
+mamaki	surprised face with open mouth	5	1	0	8	0	face
+mani	placeholder currency sign: ¤	1	1	4	4	0	
+matija	≡ SP `meso`	3	0	0	4	1	
+matin	horizontal row of three circles, with an arc arrow from the second to the first	4	3	1	3	0	arrow
+matuwa	≡ SP `mama`	1	2	1	0	0	
+meja	outline of the sides and top of a cat’s head, with dot eyes and a simplified mouth (inspired by Pusheen, completely different from `kisa`)	4	0	0	4	2	animal
+melon	horizontal row of three circles, with an arc arrow from the second to the third	4	3	1	3	0	arrow
+men	SP `en` + arrowhead in analogy with SP `li` and {in} SP `e`	1	0	2	5	0	arrow
+menu	two dot, greater-than symbol, reducing to one dot	4	0	0	2	3	
+menwo	upside down {matuwa} (SP `mama`)	1	2	1	0	0	
+mepu	a shield symbol	1	1	0	0	0	
+mese	one dot, less-than symbol, increasing to two dots	1	0	2	5	0	
+mi	≡ SP `mi`	1	1	1	1	0	
+micin	≡ SP `kala`. eyes are optional	3	1	1	2	2	animal
+mijalo	{sila} (SP `lawa`) with dot inside the cap region	2	2	2	1	1	head
+mita	# sign; ≡ SP `nanpa`	1	1	4	8	0	
+momu	≡ SP `mani`, meaning changed	1	1	2	2	0	animal
+mona	upside down V	1	0	0	2	0	
+moto	SP `seli` with curved lines to symbolize flickering flame	4	0	0	6	1	
+mu	{nin} with an underline/shadow to the right	1	1	1	2	0	
+muku	≡ SP `uta`. Dot removed because ligatures are discouraged in IT	1	1	0	0	0	mouth
+mulu	SP `insa` with ∞ {ani} (SP `ale`) inside	2	3	1	2	0	
+muncu	mouth + lemon	2	2	0	0	0	mouth
+musi	≡ SP `pipi`	3	0	3	8	2	animal
+mutakin	rightward arrow reinforced by straight line above and below	3	0	1	7	0	arrow
+muwesi	≡ SP `mun`	1	1	0	0	0	
+na	≡ SP `ni`, flipped variant	1	0	1	3	0	arrow
+naki	square with sparkles inside, symbolizing a squeaky-clean state	3	1	2	8	0	square
+nalan	rightward finger pushing on a box with a concave left side	2	2	1	1	0	
 nalinca	hue triangle between red (bottom left) and yellow (top)	1	2	1	0	0	triangle
-namu	a simplified drawing of a conifer tree						
-namuna	pinching one dot up, leaving behind three dots						
-nan	a flexing arm with a knuckle and a visible bicep bump. Replaces SP `ken` because the word no longer starts with K						
-nankin	mouth + water + fish, symbolizing seawater						
-nanku	Arabic numeral 4						
-napa	{huwonho} with negation stroke						
-nase	face with spiral eyes and a smile						
-ne	≡ SP `ni`						
-neje	a horse’s head with three lines for its mane, resembling a chess knight						
-nelo	hue triangle at the center for no hue, brightness slider at the left for dark						
-nenka	downward arrow with backwards arc arrow above (cf. SP `tan` `ni`)						
-nepa	bell curve shape with an × in the middle/peak						
-neso	≡ SP `sin` (cf. {talun}) [WIP] There’s gotta be a better way with these three.						
-niju	circle ({sin}) with two slashes on the bottom right suggesting texture						
-niku	cartoon meat-on-a-bone, cf. {umami}						
+namu	a simplified drawing of a conifer tree	1	1	1	1	0	
+namuna	pinching one dot up, leaving behind three dots	5	0	0	2	4	
+nan	a flexing arm with a knuckle and a visible bicep bump. Replaces SP `ken` because the word no longer starts with K	1	2	3	1	0	
+nankin	mouth + water + fish, symbolizing seawater	3	2	1	4	0	mouth
+nanku	Arabic numeral 4	1	0	1	4	0	number
+napa	{huwonho} with negation stroke	1	4	5	2	0	
+nase	face with spiral eyes and a smile	3	0	0	6	0	face
+ne	≡ SP `ni`	1	0	1	3	0	arrow
+neje	a horse’s head with three lines for its mane, resembling a chess knight	2	0	3	5	1	animal
+nelo	hue triangle at the center for no hue, brightness slider at the left for dark	3	2	1	3	0	triangle
+nenka	downward arrow with backwards arc arrow above (cf. SP `tan` `ni`)	2	0	2	6	0	arrow
+nepa	bell curve shape with an × in the middle/peak	2	0	1	6	0	
+neso	≡ SP `sin` (cf. {talun}) [WIP] There’s gotta be a better way with these three.	3	0	0	6	0	
+niju	circle ({sin}) with two slashes on the bottom right suggesting texture	1	3	4	0	0	circle
+niku	cartoon meat-on-a-bone, cf. {umami}	1	1	2	4	0	
 nile	hue triangle at the bottom right for blue	1	2	1	0	0	triangle
-nin	≡ SP `jan` (but with more of the torso visible, since {mako} isn’t the “broad shoulders” `mije` glyph)						
-niwa	{insu} with a dot that “lives” inside the house						
-no	left-facing arrowhead, pointing against the part-of-sentence word it negates						
-non	≡ SP `kulupu`						
-nula	Arabic numeral 0, also the empty set symbol ∅						
-o	≡ SP `o` connected  variant in <a href='https://jackhumbert.github.io/sitelen-sa/'>Jack Humbert’s <i>sitelen sa</i></a>						
-ocota	{nin} with a halo above (cf. {hela}) [WIP] Too close to hela						
-oke	checked checkbox						
-okutu	eye ≡ SP `oko` + {onton} (SP `len` for its “hidden” meaning)						
-onin	three dots supported by a straight line above and below						
-onko	≡ SP `soko` variant with stroke across stem						
-onton	≡ SP `len`						
-opoki	left-right arrow against ground/floor						
-opotu	≡ SP `ante`						
-osa	a circle with a slice cut out of it						
-osole	scared face						
-otawe	checked checklist						
-oti	cartoon bone						
-pa	Pronoun Hand pointing right + sense waves radical.						
-pajan	≡ SP `soto` (left side)						
-pan	arrow with a circle through it (arbitrary)						
-pani	≡ SP `telo` (water, liquid)						
-pankosi	shield with negation ×						
-panli	≡ SP `kipisi` (to cut, to split, piece)						
-pansin	≡ SP `leko` (block, square) (cf. {pulusi})						
-panta	a closed boom gate						
-papon	like SP `pana` (to emit), rotated 90° and emitters coming from a box instead of hand to symbolize an opening						
-pasan	smiling face, with mouth closed to distinguish from {lijule} (to laugh)						
-pasu	≡ SP `powe` (false, lie)  ([WIP] Should {lipan} be SP `powe` to contrast with {se}?)						
-pata	eye ≡ SP `oko` looking at a document						
-patun	≡ SP `awen` (to stay, unmoving)						
-pawo	pictogram of a dog’s face						
-peko	a bowing head and torso (This reminded me of the Japanese onomatopoeia ペコ *peko* for bowing)						
-pela	≡ SP `pilin` (feel, feeling, heart)						
-pelete	SP `sinpin` (face, front side, vertical surface, façade) without a dot						
-peman	a pinky-promise, represented in Sutton SignWriting						
-pen	SP `lawa` (head) with a check mark inside the head, signifying understanding						
-penpe	color radical, center signifying no hue, slider signifying brightness						
-pese	SP `awen` (to wait, to stay) with an ellipsis below to signify anticipation (cf. {patun})						
-pesuwan	SP `olin` (love) flipped, because SP `wile` (want, need) is taken by {titi}						
-pi	≡ SP `lon` ([general preposition], during, place, true)						
-pice	≡ SP `monsi` (back, behind)						
-picijo	≡ SP `noka` (foot, leg)						
-pijen	a twisted strip, symbolizing a change						
-pikante	mouth radical + chili pepper ≡ SP `namako` variant (spice, spicy, extra, embellishment)						
-pilu	"trophy  (looks like the alternate <a href=""https://sona.pona.la/wiki/umesu"" target=""_blank""><i>umesu</i></a> glyphs in <a href=""https://www.kreativekorp.com/software/fonts/fairfaxponahd/"" target=""_blank"">Fairfax Pona HD</a>)"						
-pinko	a judge’s gavel and pedestal						
-pintu	a dot, with a square to frame it						
-po	ligature of SP `tan ni:` (because of this:), with the arrow pointing  the other way. cf. {pon}, {nenka}						
-polan	≡ SP `sinpin` (face, front side, vertical surface, façade)						
-poloko	"3D isometric drawing of a cube, to distinguish from {pansin} ≡ SP `leko` (identical to the <a href=""https://sona.pona.la/wiki/Name_glyphs"">name glyph</a> for Minecraft)"						
-polota	SP `len` (clothes, clothed, hidden) with a negation slash through it						
-pon	ligature of SP `tan ni:` (because of this:), 180° rotated to invert its meaning. cf. {po}, {nenka}						
-posa	a stickman striking a pose, with either arm and leg bending a different direction						
-powele	SP `ko` (powder, paste) with dots to signify dust particles						
-pucon	{lo} radical ≡ SP `tawa` with a line above and below to signify “{lo} along a predefined lane”						
-puka	a weight, shaped like in cartoons						
-pula	color radical, circle between red and yellow to signify orange hue, slider to the left to signify darkness						
-pulusi	≡ SP `akesi` (reptile, amphibian), “corrected” variant with 2 pairs of legs						
-pumi	≡ SP `ma` (land, earth, country)						
-sa	"{nin} with {ja} pointing to the chest (completely different from the <a href""https://sona.pona.la/wiki/sipi""><i>sipi</i></a> glyph)"						
-saka	Arabic numeral 9 (Curve the bottom to distinguish from {mi})						
-sala	a “planetary model” atom with a nucleus and one electron, with an arc trail behind it						
-salila	≡ SP `sijelo`						
-saman	≡ SP `sama`						
-saminta	hiding one’s face with both hands in shame, with frowning eyebrows visible						
-samo	≡ SP `taso` (cf. {lekin})						
-san	Arabic numeral 3						
-sankan	circled exclamation mark						
-santi	smiling face with closed eyes						
-sapi	document with + sign on the bottom right						
-sapole	mouth + sense lines						
-satalan	SP `nasa` with negating stroke						
-satilu	two lines that bulge out at the center, surrounding a line in the middle, cf. {tenja}						
-satu	mouth + apple (SP `kili`)						
-se	circle with underline (cf. SP `lon`)						
-sekano	a winding road, with a map pin (cf. {jan}) on the near side						
+nin	≡ SP `jan` (but with more of the torso visible, since {mako} isn’t the “broad shoulders” `mije` glyph)	1	1	1	2	0	
+niwa	{insu} with a dot that “lives” inside the house	2	1	0	0	1	
+no	left-facing arrowhead, pointing against the part-of-sentence word it negates	1	0	0	2	0	
+non	≡ SP `kulupu`	3	3	0	0	0	
+nula	Arabic numeral 0, also the empty set symbol ∅	1	2	2	2	0	number
+o	≡ SP `o` connected  variant in <a href='https://jackhumbert.github.io/sitelen-sa/'>Jack Humbert’s <i>sitelen sa</i></a>	1	1	1	1	0	
+ocota	{nin} with a halo above (cf. {hela}) [WIP] Too close to hela	2	2	1	2	0	
+oke	checked checkbox	2	0	0	4	0	square
+okutu	eye ≡ SP `oko` + {onton} (SP `len` for its “hidden” meaning)	2	3	5	5	0	eye
+onin	three dots supported by a straight line above and below	5	0	0	4	3	
+onko	≡ SP `soko` variant with stroke across stem	1	1	2	3	0	
+onton	≡ SP `len`	1	1	3	3	0	
+opoki	left-right arrow against ground/floor	2	0	2	6	0	arrow
+opotu	≡ SP `ante`	2	0	0	4	0	
+osa	a circle with a slice cut out of it	2	2	0	0	0	circle
+osole	scared face	3	0	0	6	0	face
+otawe	checked checklist	4	0	0	8	0	
+oti	cartoon bone	1	1	0	0	0	
+pa	Pronoun Hand pointing right + sense waves radical.	3	1	1	5	0	sense lines
+pajan	≡ SP `soto` (left side)	2	1	0	0	1	
+pan	arrow with a circle through it (arbitrary)	1	2	3	3	0	arrow
+pani	≡ SP `telo` (water, liquid)	2	0	0	4	0	
+pankosi	shield with negation ×	2	1	1	4	0	
+panli	≡ SP `kipisi` (to cut, to split, piece)	3	0	0	2	2	
+pansin	≡ SP `leko` (block, square) (cf. {pulusi})	2	2	0	0	0	square
+panta	a closed boom gate	1	1	2	4	0	
+papon	like SP `pana` (to emit), rotated 90° and emitters coming from a box instead of hand to symbolize an opening	4	0	0	8	0	
+pasan	smiling face, with mouth closed to distinguish from {lijule} (to laugh)	3	0	0	6	0	face
+pasu	≡ SP `powe` (false, lie)  ([WIP] Should {lipan} be SP `powe` to contrast with {se}?)	2	0	1	6	0	
+pata	eye ≡ SP `oko` looking at a document	2	3	2	2	0	eye
+patun	≡ SP `awen` (to stay, unmoving)	1	0	0	2	0	
+pawo	pictogram of a dog’s face	4	0	0	2	2	animal
+peko	a bowing head and torso (This reminded me of the Japanese onomatopoeia ペコ *peko* for bowing)	1	1	1	1	0	
+pela	≡ SP `pilin` (feel, feeling, heart)	1	1	0	0	0	
+pelete	SP `sinpin` (face, front side, vertical surface, façade) without a dot	1	0	0	2	0	
+peman	a pinky-promise, represented in Sutton SignWriting	1	2	3	2	0	
+pen	SP `lawa` (head) with a check mark inside the head, signifying understanding	1	2	3	3	0	head
+penpe	color radical, center signifying no hue, slider signifying brightness	3	2	1	3	0	triangle
+pese	SP `awen` (to wait, to stay) with an ellipsis below to signify anticipation (cf. {patun})	4	0	0	2	3	
+pesuwan	SP `olin` (love) flipped, because SP `wile` (want, need) is taken by {titi}	1	2	2	0	0	
+pi	≡ SP `lon` ([general preposition], during, place, true)	2	0	0	2	1	
+pice	≡ SP `monsi` (back, behind)	2	0	0	2	1	
+picijo	≡ SP `noka` (foot, leg)	1	0	0	2	0	
+pijen	a twisted strip, symbolizing a change	1	2	1	0	0	
+pikante	mouth radical + chili pepper ≡ SP `namako` variant (spice, spicy, extra, embellishment)	5	1	0	8	0	mouth
+pilu	"trophy  (looks like the alternate <a href=""https://sona.pona.la/wiki/umesu"" target=""_blank""><i>umesu</i></a> glyphs in <a href=""https://www.kreativekorp.com/software/fonts/fairfaxponahd/"" target=""_blank"">Fairfax Pona HD</a>)"	1	3	6	2	0	
+pinko	a judge’s gavel and pedestal	2	2	3	3	0	
+pintu	a dot, with a square to frame it	2	1	0	0	1	square
+po	ligature of SP `tan ni:` (because of this:), with the arrow pointing  the other way. cf. {pon}, {nenka}	2	0	2	6	0	arrow
+polan	≡ SP `sinpin` (face, front side, vertical surface, façade)	2	0	0	2	1	
+poloko	"3D isometric drawing of a cube, to distinguish from {pansin} ≡ SP `leko` (identical to the <a href=""https://sona.pona.la/wiki/Name_glyphs"">name glyph</a> for Minecraft)"	1	3	4	0	0	
+polota	SP `len` (clothes, clothed, hidden) with a negation slash through it	1	2	5	5	0	
+pon	ligature of SP `tan ni:` (because of this:), 180° rotated to invert its meaning. cf. {po}, {nenka}	2	0	2	6	0	arrow
+posa	a stickman striking a pose, with either arm and leg bending a different direction	1	1	3	4	0	stickman
+powele	SP `ko` (powder, paste) with dots to signify dust particles	4	1	0	0	3	
+pucon	{lo} radical ≡ SP `tawa` with a line above and below to signify “{lo} along a predefined lane”	3	0	0	6	0	
+puka	a weight, shaped like in cartoons	1	2	1	0	0	
+pula	color radical, circle between red and yellow to signify orange hue, slider to the left to signify darkness	2	2	2	3	0	triangle
+pulusi	≡ SP `akesi` (reptile, amphibian), “corrected” variant with 2 pairs of legs	3	3	4	4	2	animal
+pumi	≡ SP `ma` (land, earth, country)	1	4	5	0	0	circle
+sa	"{nin} with {ja} pointing to the chest (completely different from the <a href""https://sona.pona.la/wiki/sipi""><i>sipi</i></a> glyph)"	2	1	2	3	0	hand
+saka	Arabic numeral 9 (Curve the bottom to distinguish from {mi})	1	1	1	1	0	number
+sala	a “planetary model” atom with a nucleus and one electron, with an arc trail behind it	2	2	1	1	0	circle
+salila	≡ SP `sijelo`	1	0	1	3	0	
+saman	≡ SP `sama`	2	0	0	4	0	
+saminta	hiding one’s face with both hands in shame, with frowning eyebrows visible	4	0	0	8	0	face, hand
+samo	≡ SP `taso` (cf. {lekin})	1	0	1	3	0	
+san	Arabic numeral 3	1	0	0	2	0	number
+sankan	circled exclamation mark	3	1	0	2	1	symbol, circle
+santi	smiling face with closed eyes	3	0	0	6	0	face
+sapi	document with + sign on the bottom right	2	0	1	6	0	
+sapole	mouth + sense lines	3	1	0	4	0	mouth, sense lines
+satalan	SP `nasa` with negating stroke	1	3	4	3	0	
+satilu	two lines that bulge out at the center, surrounding a line in the middle, cf. {tenja}	3	0	0	6	0	
+satu	mouth + apple (SP `kili`)	1	2	2	0	0	mouth
+se	circle with underline (cf. SP `lon`)	2	1	0	2	0	
+sekano	a winding road, with a map pin (cf. {jan}) on the near side	2	1	1	2	1	
 sema	ear (SP `kute`) + sense lines						
 sepo	hue triangle at the top for yellow	1	2	1	0	0	triangle
 setan	Arabic numeral 7 (Japanese-style with little tick at the top recommended)						
